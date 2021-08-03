@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
 
@@ -18,18 +19,10 @@
 <body>
     <div class="container mt-3">
         <h1>Form Input</h1>
-        <form>
+        <form id="userForm">
             <div class="mb-3">
-                <label for="Name" class="form-label">Nama</label>
+                <label for="Name" class="form-label">Nama Umur Kota</label>
                 <input type="text" class="form-control" id="Name" name="Name">
-            </div>
-            <div class="mb-3">
-                <label for="Age" class="form-label">Usia</label>
-                <input type="text" class="form-control" id="Age" name="Age">
-            </div>
-            <div class="mb-3">
-                <label for="City" class="form-label">Kota</label>
-                <input type="text" class="form-control" id="City" name="City">
             </div>
             <button type="submit" id="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -42,12 +35,7 @@
                         <th>Kota</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Edi Suprayitno</td>
-                        <td>25</td>
-                        <td>Malang</td>
-                    </tr>
+                <tbody id="listdatainput">
                 </tbody>
             </table>
         </div>

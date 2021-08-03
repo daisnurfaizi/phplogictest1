@@ -25,7 +25,6 @@ class FormInput
     // untuk menghandle kota
     public function getCity($value)
     {
-
         $num_char = strlen($value);
         $text = $value;
         $char = $text[$num_char - 1];
@@ -33,6 +32,7 @@ class FormInput
             $char = $text[--$num_char]; // Cari spasi pada posisi
         }
         $city = substr($text, $num_char - strlen($text));
-        return preg_replace('/[0-9]+/', '', $city);
+        $filtercity = preg_replace('/[0-9]+/', '', $city);
+        return preg_replace("/th|tahun/i", "", $filtercity);
     }
 }
