@@ -20,7 +20,8 @@ class FormInput
         while ($char != is_numeric($char)) {
             $char = $text[--$num_char]; // Cari spasi pada posisi 
         }
-        return substr($text, 0, $num_char - 1);
+        $name = substr($text, 0, $num_char - 1);
+        return preg_replace('/[0-9]+/', '', $name);
     }
     // untuk menghandle kota
     public function getCity($value)
